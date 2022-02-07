@@ -30,6 +30,15 @@
         "<node_internals>/**"
       ],
       "program": "${workspaceFolder}/test-paci.js"
-    }
+    },
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Launch toDecimal Testi",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/to-decimal.js"
+    }    
   ]
 }

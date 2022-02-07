@@ -1,4 +1,4 @@
-module.exports = { 
+module.exports = {
 	"extends": "airbnb-base",
 	"rules" : {
 		"no-cond-assign": [2, "except-parens"],
