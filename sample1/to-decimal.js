@@ -3,7 +3,9 @@
 function toDecimal(str, radix) {
   let dec = 0;
   for (let i = str.length - 1, exp = 0; i >= 0; i--) {
+    // dec = dec + parse ith char to int and multiply it by radix pow exp
     dec += parseInt(str.charAt(i), radix) * radix ** exp++;
+    // exp is now increment by one
   }
   return dec;
 }
