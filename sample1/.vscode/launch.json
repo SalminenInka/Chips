@@ -39,6 +39,15 @@
         "<node_internals>/**"
       ],
       "program": "${workspaceFolder}/to-decimal.js"
-    }    
+    },
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Launch RegExp Testi",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/regexp-circus.js"
+    }      
   ]
 }
