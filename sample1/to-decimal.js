@@ -11,14 +11,10 @@ function toDecimal(str, radix) {
 }
 
 [
-  { str: '010101', radix: 2 },
-  { str: '11111111', radix: 2 },
-  { str: '199', radix: 16 },
-  { str: '100', radix: 8 },
-  { str: '100', radix: 10 },
-  { str: 'DEAD', radix: 16 },
-  { str: 'BABE', radix: 16 },
-  { str: 'CAFE', radix: 16 },
+  { str: '01010011', radix: 2 },
+  { str: '1010', radix: 2 },
+  { str: 'DECAF', radix: 16 },
+  { str: 'DEAF', radix: 16 },
 ]
   .forEach((test) => {
     const asDecimal = toDecimal(test.str, test.radix);
