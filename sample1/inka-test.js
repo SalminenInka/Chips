@@ -1,21 +1,40 @@
-const map1 = new Map();
+const reBin = /(0|1)+/;
+const reDec = /^[0-9]+$/;
+const reOct = /^[0-7]+$/;
+const reHex = /^[0-9A-F]+$/i;
 
-map1.set('a', 1);
-map1.set('b', 2);
-map1.set('c', 3);
+['10101010', '76987098', '32321321', '878afd', 'DEAD', 'A7H8K', 'BEEF', ]
+  .forEach((luku) => {
+    try {
+    if (luku.match(reBin)) console.log(`Luku ${luku} voi olla binääri`);
+    if (luku.match(reOct)) console.log(`Luku ${luku} voi olla oktaali`);
+    if (luku.match(reDec)) console.log(`Luku ${luku} voi olla desimaali`);
+    if (luku.match(reHex)) console.log(`Luku ${luku} voi olla hexadesimaali`);
+   else {
+     throw new Error(LukuError)
+    }
+  } catch(error) { 
+    console.log('Luku ' + luku + ' ei ole kelvollinen luku, keksi muuta.' )
+  }});
 
-console.log(map1.get('a'));
-// expected output: 1
+const patterns = new Map([[2, /^(0|1)+$/], [8, /^[0-7]+$/], [10, /^[0-9]+$/], [16, /^[0-9A-F]+$/i]]);
 
-map1.set('a', 97);
-
-console.log(map1.get('a'));
-// expected output: 97
-
-console.log(map1.size);
-// expected output: 3
-
-map1.delete('b');
-
-console.log(map1.size);
-// expected output: 2
+[
+  { radix: 2, luku: '10101010' },
+  { radix: 2, luku: '76987098' },
+  { radix: 8, luku: '32321321' },
+  { radix: 10, luku: '878afd' },
+  { radix: 16, luku: 'DEAD' },
+  { radix: 2, luku: 'A7H8K' }, // odotettavissa kaksi kantalukuunsa sopimationta
+]
+  .forEach((testattava) => {
+    const { radix, luku } = testattava;
+    const re = patterns.get(radix);
+    try {
+    if (luku.match(re)) console.log(Luku + ' sopii yhteen kantaluvun ' + radix + ' kanssa.');
+    else {
+      throw new Error(RadixError)
+    }} catch(error) {
+      console.log('Radix ei sovi lukuun')
+    }
+  });
