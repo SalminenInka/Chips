@@ -13,6 +13,5 @@ module.exports = {
   rules: {
     'no-cond-assign': [2, 'except-parens'],
     'no-console': 'off',
-    'lines-between-class-members': ['error', { exceptAfterSingleLine: true }],
   },
 };
