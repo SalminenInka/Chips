@@ -38,7 +38,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}/to-decimal.js"
+      "program": "${workspaceFolder}/to-decimal-test.js"
     },
     {
       "type": "pwa-node",
