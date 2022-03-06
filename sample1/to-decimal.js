@@ -1,5 +1,5 @@
 /* eslint-disable no-plusplus */
-const radixToRegex = new Map([[2, /^(0|1)+$/], [8, /^[0-7]+$/], [10, /^[0-9]+$/], [16, /^[0-9A-F]+$/i]]);
+const radixToRegex = new Map([[2, /^(0|1)+$/],[4, /^[0-3]+$/], [8, /^[0-7]+$/], [10, /^[0-9]+$/], [16, /^[0-9A-F]+$/i]]);
 
 function toDecimal(str, radix) {
   const regex = radixToRegex.get(radix);

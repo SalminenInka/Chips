@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Asiatietoa lumesta.</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>Todellista tietoa lumesta.</h1>
+
+    <!-- #1 -->
+    <div class="painikkeet show" id="painike1">
+      <button onclick="one()">Näytä 2. fakta.</button>
+    </div> 
+
+    <!-- #2 -->
+    <div class="painikkeet" id="painike2">
+      <button onclick="three()">Näytä 1. päätelmä.</button>
+    </div>
+
+   <!-- #3 -->
+   <div class="painikkeet" id="painike3">
+      <button onclick="five()">Näytä 3. fakta.</button>
+   </div>
+
+   <!-- #4 -->
+    <div class="painikkeet" id="painike4">
+      <button onclick="seven()">Näytä 4. fakta. </button>
+    </div>
+
+   <!-- #5 -->
+    <div class='painikkeet' id='painike5'>
+      <button onclick='nine()'>Näytä 5. fakta.</button>
+    </div> 
+
+       <!-- #6 -->
+       <div class='painikkeet' id='painike6'>
+        <button onclick='twelve()'>Näytä loppupäätelmä.</button>
+      </div> 
+
+    <div class="laatikko">
+      <p class="viesti show" id="viesti1">Fakta 1. Lumi on jääkiteiden ja ilman muodostamaa kuohkeaa ainetta,
+        jota syntyy pilvissä ja sataa maahan talvella riippuen siitä, onko ilman lämpötila tarpeeksi kylmä.</p>
+      <p class="viesti" id="viesti3">Fakta 2. Normaalipaineessa makea vesi jäätyy 0 °C:n (273,15 K, 32 °F) lämpötilassa.</p>
+      <p class="viesti" id="viesti5">1. päätelmä. Koska lumi on jääkiteistä muodostunutta, kuohkeaa ainetta ja koska jää on olemassa ainoastaan lämpötilan ollessa 0 °C tai sen alle, voimme todeta että lämpötilan ollessa yli tuon lukeman ei lumi voi olla olemassa.</p>
+      <p class="viesti" id="viesti7">Fakta 3. Suomen ilmatieteiden laitos tutkii säätä. Ilmatieteiden laitoksen sääasemoita on ympäri Suomen, mutta päämaja sijaitsee Kumpulassa, Helsingissä.</p>
+      <p class='viesti' id='viesti9'>Fakta 4. Ilmatieteen laitos tarjoaa kuvan Suomen keskimääräisestä säästä. Liukuva paraabelifunktio kuvaa keskimääräistä lämpötilaa ajanjaksolla.</p>
+      <p class='viesti' id='viesti11'>Fakta 5. Maaliskuun keskilämpötilaksi ilmoitetaan -4,4 °C, kun taas huhtikuun keskilämpötilaksi
+        ilmoitetaan 1,4 °C.</p>
+      <p class='viesti' id='viesti12'>Loppupäätelmä. Koska lumi ei ole olemassa lämpötilan noustessa yli 0 °C, ei lumi ole todellinen ilmiö huhtikuussa. Funktion paraabelimuoto myös kuvaa kuinka lämpötila muuttuu vähitellen,
+        joten oletettavaa on, että lämpötila nousee yli 0 °C jo ennen huhtikuuta. Ipso facto, lumet ovat historiaa maaliskuun aikana. </p>
+    </div>
+
+    <script>
+
+        function alku() {
+
+          var element = document.getElementById("painike1");
+          element.classList.remove("show");
+
+        };
+
+        function one() {
+          let element = document.getElementById('viesti3');
+          element.classList.add('show');
+
+          let element2 = document.getElementById("painike2");
+          element2.classList.add("show");
+
+          let element3 = document.getElementById("painike1");
+          element3.classList.remove("show");
+
+          let element4 = document.getElementById("viesti1");
+          element4.classList.remove("show");
+
+        };
+
+
+        function three() {
+          let element = document.getElementById('viesti5');
+          element.classList.add('show');
+
+          let element2 = document.getElementById("painike3");
+          element2.classList.add("show");
+
+          let element3 = document.getElementById("painike2");
+          element3.classList.remove("show");
+
+          let element4 = document.getElementById("viesti3");
+          element4.classList.remove("show");
+        };
+
+
+        function five() {
+          let element = document.getElementById('viesti7');
+          element.classList.add('show');
+
+          let element2 = document.getElementById("painike4");
+          element2.classList.add("show");
+
+          let element3 = document.getElementById("painike3");
+          element3.classList.remove("show");
+
+          let element4 = document.getElementById("viesti5");
+          element4.classList.remove("show");
+        };
+
+
+        function seven() {
+          let element = document.getElementById('viesti9');
+          element.classList.add('show');
+
+          let element2 = document.getElementById("painike5");
+          element2.classList.add("show");
+
+          let element3 = document.getElementById("painike4");
+          element3.classList.remove("show");
+
+          let element4 = document.getElementById("viesti7");
+          element4.classList.remove("show");
+        };
+
+
+        function nine() {
+          let element = document.getElementById('viesti11');
+          element.classList.add('show');
+
+          let element2 = document.getElementById("painike6");
+          element2.classList.add("show");
+
+          let element3 = document.getElementById("painike5");
+          element3.classList.remove("show");
+
+          let element4 = document.getElementById("viesti9");
+          element4.classList.remove("show");
+        };
+
+        function twelve() {
+          let element = document.getElementById('viesti12');
+          element.classList.add('show');
+
+          let element2 = document.getElementById("painike6");
+          element2.classList.remove("show");
+
+          let element3 = document.getElementById("painike5");
+          element3.classList.remove("show");
+
+          let element4 = document.getElementById("viesti11");
+          element4.classList.remove("show");
+        };
+
+
+
+     
+    </script>
+</body>
+</html>
+
+<style>
+  .painikkeet {
+    display: none;
+    color: #ffffff
+  }
+  body {
+    background: #2358a7;
+    color: rgb(255, 255, 255);
+  }
+  .laatikko {
+    border: 1px solid #ffffff;
+    padding: 8px;
+    margin-top: 24px;
+    background: #ffffff;
+  }
+  .laatikko .viesti {
+    padding: 16px 0;
+    border-top: 1px #ffffff solid;
+    color: #000000;
+    display: none;
+  }
+  .show {
+    display: block!important;
+  }
+</style>

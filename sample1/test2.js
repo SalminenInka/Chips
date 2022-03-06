@@ -1,34 +1,16 @@
-const bigthings = ['Blue whale', 'Ship', 'Aeroplane', 'Urho'];
-let letterEorP = 0;
-for (i = 0; i < bigthings.length; i++) { 
-    const bigboi = bigthings[i];
-    for (j = 0; j < bigboi.length; j++) {
-        const letter = bigboi.charAt(j);
-        if (letter === 'e' || letter === 'p') letterEorP++;
-       // console.log(bigboi.charAt(j))
-    }};
- console.log(letterEorP);
-
-
-
-const names = ['Inka', 'Valtteri', 'Jasmin', 'Paki', 'Katri', 'Ukemi', 'Mauku', 'Maikkuli', 'Hilipatipippan', 'Make'];
-let expectedK = names[3].charAt(2)
-let order = names.sort();
-let expectedT = order[3].charAt(2)
-if (expectedK === 'k' && expectedT === 'b') {
-    console.log('yes');
-} else {
-    console.log('no')
-};
-
-const harjoitus1 = function(a, b) {
-    return a - b;
+function anyScale(temp) {
+  let result = '';
+  if (temp.includes('C')) {
+    result = (`${(temp.replace('C', '')) * (9 / 5) + 32} F`);
+  } else if (temp.includes('c')) {
+    result = (`${temp.replace('c', '') * (9 / 5) + 32} F`);
+  } else if (temp.includes('F')) {
+    result = (`${(temp.replace('F', '') - 32) * (5 / 9)} C`);
+  } else if (temp.includes('f')) {
+    result = (`${(temp.replace('f', '') - 32) * (5 / 9)} C`);
+  } else {
+    result = 'Only enter numerals followed by F or C.';
+  }
+  return result;
 }
-console.log(harjoitus1(10,7));
-
-// 01010011 binääri desimaaliin
-function binToDec(bstr) {
-    return parseInt ((bstr + '')
-    .replace(/[^01]/gi, ''), 2);
-};
-console.log(binToDec('01010011'));
+console.log(anyScale('c'));
