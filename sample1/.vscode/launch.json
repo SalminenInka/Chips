@@ -6,29 +6,23 @@
   "configurations": [
 
     
-
-
-
-
-
-
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Binary-moduuli",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/binary-tree.js"
+    },
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Binary Tree Test",
+      "name": "Binary Tree Test",
       "program": "${workspaceFolder}/binary-tree-test.js",
       "skipFiles": [
         "<node_internals>/**"
       ]
-    },
-    {
-      "type": "pwa-node",
-      "request": "launch",
-      "name": "Lottery",
-      "skipFiles": [
-        "<node_internals>/**"
-      ],
-      "program": "${workspaceFolder}/Lottery.js"
     },
     {
       "type": "pwa-node",
@@ -38,6 +32,15 @@
         "<node_internals>/**"
       ],
       "program": "${workspaceFolder}/test2.js"
+    },
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Coinflip",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/Coinflip.js"
     },
     {
       "type": "pwa-node",
